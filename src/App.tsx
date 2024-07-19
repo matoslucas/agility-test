@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CharacterSearch from "./components/pages/CharacterSearch";
+import TerrainChart from "./components/pages/TerrainChart";
+import PlanetsGraph from "./components/pages/PlanetsGraph";
+import Nav from "./components/layout/Nav";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path="/" element={<PlanetsGraph />} />
+          <Route path="/character-search" element={<CharacterSearch />} />
+          <Route path="/terrain-chart" element={<TerrainChart />} />
+          <Route path="/planets" element={<PlanetsGraph />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
