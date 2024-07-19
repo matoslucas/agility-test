@@ -1,6 +1,6 @@
-import { Planet } from "../../types";
+import { Planet } from "../types";
 import React, { useEffect, useRef, useState } from "react";
-import { fetchPlanets } from "../../services/swapi";
+import { fetchPlanets } from "../services/swapi";
 import * as d3 from "d3";
 import PageContainer from "../layout/PageContainer";
 

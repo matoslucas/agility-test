@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { fetchCharacter } from "../../services/swapi";
+import { fetchCharacter } from "../services/swapi";
 import SearchBar from "../forms/SearchBar";
 import PageContainer from "../layout/PageContainer";
-import SearchResult from "../SearchResult";
+import SearchResult from "../components/SearchResult";
 
 const CharacterSearch: React.FC = () => {
   const [name, setName] = useState("");

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
-import { fetchPlanetsTerrain } from "../../services/swapi";
+import { fetchPlanetsTerrain } from "../services/swapi";
 import PageContainer from "../layout/PageContainer";
 
 interface TerrainCount {
