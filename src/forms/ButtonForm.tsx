@@ -42,7 +42,7 @@ const ButtonForm: React.FC<ButtonFormProps> = (props: ButtonFormProps) => {
 
   return (
     
-      <button type={type} className={classes}>
+      <button type={type} className={classes} onClick={onClick}>
         {beforeIcon && <FontAwesomeIcon icon={beforeIcon} className="mr-2" />}
         {label}
         {afterIcon && <FontAwesomeIcon icon={afterIcon} className="ml-2" />}
